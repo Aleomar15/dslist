@@ -18,11 +18,13 @@ public class Game {
 	@Column(name = "game_year")
 	private int year;
 	private String genre;
-	private String plastforms;
+	private String platforms;
 	private double score;
 	private String imgUrl;
-	private String shortDecription;
-	private String longDecription;
+	@Column(columnDefinition = "TEXT")
+	private String shortDescription;
+	@Column(columnDefinition = "TEXT")
+	private String longDescription;
 	
 	public Game() {
 		
@@ -30,16 +32,16 @@ public class Game {
 
 	
 
-	public Game(long id, String title, int year, String genre, String plastforms, double score, String imgUrl,
-			String shortDecription, String longDecription) {
+	public Game(long id, String title, int year, String genre, String platforms, double score, String imgUrl,
+			String shortDescription, String longDescription) {
 		this.id = id;
 		this.title = title;
 		this.year = year;
 		this.genre = genre;
-		this.plastforms = plastforms;
+		this.platforms = platforms;
 		this.score = score;
 		this.imgUrl = imgUrl;
-		this.shortDecription = shortDecription;
+		this.shortDescription = shortDescription;
 		this.longDecription = longDecription;
 	}
 
@@ -82,11 +84,11 @@ public class Game {
 	}
 
 	public String getPlastforms() {
-		return plastforms;
+		return platforms;
 	}
 
-	public void setPlastforms(String plastforms) {
-		this.plastforms = plastforms;
+	public void setPlastforms(String platforms) {
+		this.platforms = platforms;
 	}
 
 	public double getScore() {
@@ -105,20 +107,20 @@ public class Game {
 		this.imgUrl = imgUrl;
 	}
 
-	public String getShortDecription() {
-		return shortDecription;
+	public String getShortDescription() {
+		return shortDescription;
 	}
 
-	public void setShortDecription(String shortDecription) {
-		this.shortDecription = shortDecription;
+	public void setShortDescription(String shortDecription) {
+		this.shortDescription = shortDecription;
 	}
 
-	public String getLongDecription() {
-		return longDecription;
+	public String getLongDescription() {
+		return longDescription;
 	}
 
-	public void setLongDecription(String longDecription) {
-		this.longDecription = longDecription;
+	public void setLongDescription(String longDecription) {
+		this.longDescription = longDecription;
 	}
 
 
