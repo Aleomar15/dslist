@@ -42,7 +42,7 @@ public class Game {
 		this.score = score;
 		this.imgUrl = imgUrl;
 		this.shortDescription = shortDescription;
-		this.longDecription = longDecription;
+		this.longDescription = longDescription;
 	}
 
 
